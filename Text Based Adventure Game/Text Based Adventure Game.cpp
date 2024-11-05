@@ -33,30 +33,6 @@ Enemy ratAmount[9];
 int x;
 int y;
 
-int main()
-{
-	char hero;
-
-	cout << "Thank god! It's you isn't it, the legendary Tony Oakden, it's been foretold that you would save us from this cursed place" << endl;
-	cout << "Please save us!" << endl;
-	cout << "y/n" << endl;
-	cin >> hero;
-
-	hero = tolower(hero);
-
-	if (hero == 'y')
-	{
-		cout << "THANK YOU! YOUR KINDNESS WILL NOT BE FORGOTTEN!" << endl;
-		cout << "Please hurry, I hear things in the other room." << endl;
-		Movement.moveNorth();
-	}
-	else if (hero == 'n')
-	{
-		cout << "Oh... Ok..." << endl;
-		exit(0);
-	}
-}
-
 #pragma region classes
 class Movement
 {
@@ -94,6 +70,7 @@ public:
 		}
 	}
 };
+Movement movement;
 
 class battle
 {
@@ -141,3 +118,28 @@ public:
 		}
 	}
 };
+#pragma endregion
+
+int main()
+{
+	char hero;
+
+	cout << "Thank god! It's you isn't it, the legendary Tony Oakden, it's been foretold that you would save us from this cursed place" << endl;
+	cout << "Please save us!" << endl;
+	cout << "y/n" << endl;
+	cin >> hero;
+
+	hero = tolower(hero);
+
+	if (hero == 'y')
+	{
+		cout << "THANK YOU! YOUR KINDNESS WILL NOT BE FORGOTTEN!" << endl;
+		cout << "Please hurry, I hear things in the other room." << endl;
+		movement.moveNorth();
+	}
+	else if (hero == 'n')
+	{
+		cout << "Oh... Ok..." << endl;
+		exit(0);
+	}
+}
