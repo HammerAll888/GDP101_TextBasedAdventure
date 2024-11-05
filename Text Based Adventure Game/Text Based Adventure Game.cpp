@@ -29,7 +29,7 @@ struct Maze
 
 Maze room[4][4];
 Player player;
-Enemy ratAmount[9];
+Enemy ratAmount[15];
 int x;
 int y;
 
@@ -66,11 +66,20 @@ public:
 			moveEast();
 			break;
 		default:
-			cout << "Invalid choice" << endl;
+			cout << "INVALID CHOICE, YOU SHALL DIE NOW" << endl;
 		}
 	}
 };
 Movement movement;
+
+class enemySpawner
+{
+public:
+	Enemy ratSpawner(Enemy rat)
+	{
+
+	}
+}
 
 class battle
 {
@@ -114,7 +123,7 @@ public:
 			runAway();
 			break;
 		default:
-			cout << "Invalid choice" << endl;
+			cout << "INVALID CHOICE, YOU SHALL DIE NOW" << endl;
 		}
 	}
 };
@@ -135,7 +144,7 @@ int main()
 	{
 		cout << "THANK YOU! YOUR KINDNESS WILL NOT BE FORGOTTEN!" << endl;
 		cout << "Please hurry, I hear things in the other room." << endl;
-		movement.moveNorth();
+		movement.move();
 	}
 	else if (hero == 'n')
 	{
