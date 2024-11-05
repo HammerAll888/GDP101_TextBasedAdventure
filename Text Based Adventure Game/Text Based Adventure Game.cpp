@@ -72,15 +72,6 @@ public:
 };
 Movement movement;
 
-class enemySpawner
-{
-public:
-	Enemy ratSpawner(Enemy rat)
-	{
-
-	}
-}
-
 class battle
 {
 private:
